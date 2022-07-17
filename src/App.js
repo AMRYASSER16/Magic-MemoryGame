@@ -3,12 +3,12 @@ import Card from './components/Card';
 import './App.css';
 
 const cardImages = [
-	{ src: './img/helmet-1.png', matched: false },
-	{ src: './img/potion-1.png', matched: false },
-	{ src: './img/ring-1.png', matched: false },
-	{ src: './img/scroll-1.png', matched: false },
-	{ src: './img/shield-1.png', matched: false },
-	{ src: './img/sword-1.png', matched: false }
+	{ "src": '/Magic-MemoryGame/img/helmet-1.png', matched: false },
+	{ "src": '/Magic-MemoryGame/img/potion-1.png', matched: false },
+	{ "src": '/Magic-MemoryGame/img/ring-1.png', matched: false },
+	{ "src": '/Magic-MemoryGame/img/scroll-1.png', matched: false },
+	{ "src": '/Magic-MemoryGame/img/shield-1.png', matched: false },
+	{ "src": '/Magic-MemoryGame/img/sword-1.png', matched: false }
 ];
 
 function App() {
