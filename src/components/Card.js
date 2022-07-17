@@ -10,9 +10,9 @@ const card = ({ card, handleChoice, flipped, disabled }) => {
 
     return (
         <div className="card">
-            <div className={flipped ? 'flipped' : ''}>
-                <img className="front" src={card.src} alt="front" />
-                <img className="back" src="/img/cover.png" alt="back" onClick={handlerBackClick} />
+            <div className={flipped ? "flipped" : ""}>
+                <img className="front" src={card.src} alt="front-img" />
+                <img className="back" src="/img/cover.png" alt="back-img" onClick={handlerBackClick} />
             </div>
         </div>
     );

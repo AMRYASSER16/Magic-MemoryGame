@@ -52,8 +52,6 @@ function App() {
 						});
 					});
 					resetTurn();
-
-					console.log(cards);
 				} else {
 					setTimeout(() => resetTurn(), 1000);
 				}
