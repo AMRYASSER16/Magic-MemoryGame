@@ -43,13 +43,15 @@ function App() {
 									matched: true
 								};
 							} else {
-								return card
+								return card;
 							}
 						});
 					});
 					resetTurn();
+
+					console.log(cards)
 				} else {
-					resetTurn();
+					setTimeout(() => resetTurn(), 1000)
 				}
 			}
 		},
@@ -67,7 +69,16 @@ function App() {
 			<h1>Magic Match</h1>
 			<button onClick={shuffleCards}>New Game</button>
 
-			<Card cards={cards} handleChoice={handleChoice} />
+			<div className="card-grid">
+				{cards.map((card) => (
+					<Card
+						key={card.id}
+						card={card}
+						flipped={card === choiceOne || card === choiceTwo || card.matched}
+						handleChoice={handleChoice}
+					/>
+				))}
+			</div>
 		</div>
 	);
 }

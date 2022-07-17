@@ -1,23 +1,19 @@
 import React from 'react';
 import './Card.css';
 
-const card = ({ cards, handleChoice }) => {
-	const handlerBackClick = (card) => {
-        handleChoice(card)
+const card = ({ card, handleChoice, flipped }) => {
+    const handlerBackClick = () => {
+        handleChoice(card);
     };
 
-	return (
-		<div className="card-grid">
-			{cards.map((card) => (
-				<div className="card" key={card.id}>
-					<div>
-						<img className="card-front" src={card.src} alt="card-front" />
-						<img className="card-back" src="/img/cover.png" alt="card-back" onClick={() => handlerBackClick(card)} />
-					</div>
-				</div>
-			))}
-		</div>
-	);
+    return (
+        <div className="card">
+            <div className={flipped ? 'flipped' : ''}>
+                <img className="front" src={card.src} alt="front" />
+                <img className="back" src="/img/cover.png" alt="back" onClick={handlerBackClick} />
+            </div>
+        </div>
+    );
 };
 
 export default card;
